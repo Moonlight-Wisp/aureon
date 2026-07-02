@@ -1,0 +1,22 @@
+/* Pricing grid */
+.billing-toggle { display: inline-flex; padding: 5px; margin-bottom: 40px; background: var(--paper); border: 1px solid var(--line); border-radius: 100px; transition: var(--theme-transition); }
+.billing-btn { border: 0; padding: 12px 22px; border-radius: 100px; background: transparent; font-weight: 700; font-size: 14px; color: var(--ink-soft); cursor: pointer; transition: background .25s, color .25s, transform .2s; display: inline-flex; align-items: center; gap: 8px; }
+.billing-btn.active { background: var(--ink); color: #fff; }
+[data-theme="dark"] .billing-btn.active { background: var(--cobalt); }
+.billing-badge { padding: 3px 8px; background: var(--lime); color: var(--ink); border-radius: 100px; font-size: 10px; font-weight: 800; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 40px; }
+.plan-card { position: relative; padding: 36px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); transition: transform .35s var(--ease-out), box-shadow .35s, border-color .35s, background .45s; }
+.plan-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: rgba(49,87,246,.25); }
+.plan-featured { border-color: var(--cobalt); box-shadow: 0 20px 60px rgba(49,87,246,.18); transform: scale(1.03); }
+.plan-featured:hover { transform: scale(1.03) translateY(-8px); }
+.plan-popular { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); padding: 6px 14px; background: var(--lime); color: var(--ink); border-radius: 100px; font-size: 10px; font-weight: 800; white-space: nowrap; }
+.plan-tag { display: block; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; color: var(--ink-soft); margin-bottom: 12px; }
+.plan-card h3 { font-size: 28px; margin-bottom: 20px; }
+.plan-price { margin-bottom: 28px; }
+.plan-price strong { font: 700 48px "Manrope"; letter-spacing: -.04em; color: var(--cobalt); }
+.plan-price span { display: block; margin-top: 4px; font-size: 13px; color: var(--ink-soft); }
+.plan-custom strong { font-size: 36px; color: var(--ink); }
+.plan-features { list-style: none; margin: 0 0 32px; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.plan-features li { position: relative; padding-left: 22px; font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+.plan-features li::before { content: "✓"; position: absolute; left: 0; color: var(--cobalt); font-weight: 800; }
+.plan-cta { width: 100%; }

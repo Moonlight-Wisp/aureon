@@ -1,0 +1,22 @@
+/* ROI Calculator */
+.roi-section { padding-top: 60px; }
+.roi-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.roi-controls { padding: 48px; border-right: 1px solid var(--line); }
+.roi-field { margin-bottom: 36px; }
+.roi-field:last-child { margin-bottom: 0; }
+.roi-field label { display: block; margin-bottom: 14px; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+.range-row { display: flex; align-items: center; gap: 18px; }
+.range-row input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 6px; background: linear-gradient(90deg, var(--cobalt) var(--range-pct, 50%), var(--range-track) var(--range-pct, 50%)); border-radius: 100px; cursor: pointer; }
+.range-row input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; background: var(--ink); border: 3px solid var(--lime); border-radius: 50%; cursor: grab; transition: transform .2s var(--ease-spring); }
+.range-row input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+.range-row input[type="range"]::-webkit-slider-thumb:active { cursor: grabbing; }
+.range-row output { min-width: 48px; font: 700 18px "Manrope"; color: var(--cobalt); text-align: right; }
+.roi-results { padding: 48px; display: flex; flex-direction: column; gap: 18px; background: var(--ink); color: #fff; }
+.roi-result-card { padding: 24px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; transition: transform .3s var(--ease-out), background .3s; }
+.roi-result-card:hover { transform: translateX(6px); background: rgba(255,255,255,.1); }
+.roi-result-card.roi-highlight { background: var(--cobalt); border-color: transparent; }
+.roi-label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: rgba(255,255,255,.55); margin-bottom: 8px; }
+.roi-result-card strong { display: block; font: 700 clamp(36px, 4vw, 52px) "Manrope"; letter-spacing: -.04em; transition: color .2s; }
+.roi-result-card strong.updated { color: var(--lime); }
+.roi-result-card small { font-size: 12px; color: rgba(255,255,255,.6); }
+.roi-cta { margin-top: auto; width: 100%; }

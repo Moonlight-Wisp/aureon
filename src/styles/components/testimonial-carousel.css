@@ -1,0 +1,16 @@
+/* Testimonial carousel */
+.testimonial-carousel { position: relative; padding: 55px; background: var(--cobalt); border-radius: var(--radius); overflow: hidden; }
+.testimonial-track { position: relative; min-height: 220px; }
+.testimonial-slide { position: absolute; inset: 0; display: grid; grid-template-columns: 100px 1fr 220px; align-items: end; gap: 40px; opacity: 0; transform: translateX(30px); transition: opacity .5s var(--ease-out), transform .5s var(--ease-out); pointer-events: none; }
+.testimonial-slide.active { opacity: 1; transform: none; pointer-events: auto; position: relative; }
+.testimonial-slide .quote-mark { align-self: start; font: 90px/1 Georgia; color: var(--lime); }
+.testimonial-slide blockquote { margin: 0; font: 500 clamp(23px, 2.7vw, 38px)/1.35 "Manrope"; letter-spacing: -.035em; color: #fff; }
+.testimonial-controls { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.15); }
+.t-prev, .t-next { width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; background: rgba(255,255,255,.08); color: #fff; cursor: pointer; display: grid; place-items: center; transition: background .25s, transform .25s var(--ease-spring); }
+.t-prev:hover, .t-next:hover { background: rgba(255,255,255,.18); transform: scale(1.08); }
+.t-prev svg, .t-next svg { width: 18px; }
+.t-dots { display: flex; gap: 8px; }
+.t-dot { width: 8px; height: 8px; border: 0; border-radius: 50%; background: rgba(255,255,255,.25); cursor: pointer; padding: 0; transition: transform .25s var(--ease-spring), background .25s; }
+.t-dot.active { background: var(--lime); transform: scale(1.3); }
+.portrait-alt { background: #dbe2ff !important; color: var(--cobalt) !important; }
+.portrait-alt2 { background: #1c1e23 !important; color: var(--lime) !important; }

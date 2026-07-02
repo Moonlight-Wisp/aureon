@@ -1,0 +1,9 @@
+/* Loader */
+.page-loader { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center; background: var(--ivory); transition: opacity .6s ease, visibility .6s; }
+.loader-mark { display: inline-flex; align-items: flex-end; gap: 3px; width: 36px; height: 36px; padding: 6px; background: var(--ink); border-radius: 50%; animation: loaderPulse 1.2s ease-in-out infinite; }
+.loader-mark span { display: block; width: 5px; background: var(--lime); border-radius: 3px; transform: rotate(24deg); animation: loaderBars 1s ease-in-out infinite alternate; }
+.loader-mark span:nth-child(1) { height: 10px; animation-delay: 0s; }
+.loader-mark span:nth-child(2) { height: 18px; animation-delay: .15s; }
+.loader-mark span:nth-child(3) { height: 13px; animation-delay: .3s; }
+@keyframes loaderPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@keyframes loaderBars { from { opacity: .5; } to { opacity: 1; } }

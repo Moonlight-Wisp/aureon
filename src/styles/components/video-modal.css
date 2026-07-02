@@ -1,0 +1,29 @@
+/* Video modal */
+.video-modal { position: fixed; inset: 0; z-index: 500; display: grid; place-items: center; padding: 24px; opacity: 0; visibility: hidden; transition: opacity .35s, visibility .35s; }
+.video-modal.open { opacity: 1; visibility: visible; }
+.video-backdrop { position: absolute; inset: 0; background: rgba(18,20,23,.75); backdrop-filter: blur(8px); }
+.video-dialog { position: relative; width: min(640px, 100%); background: var(--paper); border-radius: 24px; padding: 32px; box-shadow: 0 40px 100px rgba(0,0,0,.35); transform: scale(.92) translateY(20px); transition: transform .4s var(--ease-out); }
+.video-modal.open .video-dialog { transform: none; }
+.video-close { position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--ink); color: #fff; cursor: pointer; display: grid; place-items: center; transition: transform .2s; z-index: 2; }
+.video-close:hover { transform: scale(1.1); }
+.video-close svg { width: 18px; }
+.video-frame { border-radius: 16px; overflow: hidden; background: var(--ink); min-height: 340px; }
+.video-caption { margin: 16px 0 0; text-align: center; font-size: 13px; color: var(--ink-soft); }
+.demo-chat { padding: 24px; display: flex; flex-direction: column; gap: 14px; min-height: 240px; }
+.demo-msg { display: flex; gap: 10px; align-items: flex-start; animation: msgIn .5s var(--ease-out) both; }
+.demo-msg.demo-user { justify-content: flex-end; animation-delay: .8s; }
+.demo-msg.demo-typing { animation-delay: 1.6s; }
+.demo-avatar { display: grid; place-items: center; width: 32px; height: 32px; background: var(--cobalt); color: #fff; border-radius: 50%; font: 800 11px "Manrope"; flex-shrink: 0; }
+.demo-msg p { margin: 0; padding: 12px 16px; border-radius: 14px; font-size: 13px; line-height: 1.5; max-width: 85%; }
+.demo-bot p { background: rgba(255,255,255,.1); color: #e8e8ea; }
+.demo-user p { background: var(--cobalt); color: #fff; border-radius: 14px 14px 4px 14px; }
+.typing-dots { display: flex; gap: 5px; padding: 14px 18px; background: rgba(255,255,255,.1); border-radius: 14px; }
+.typing-dots span { width: 7px; height: 7px; background: rgba(255,255,255,.5); border-radius: 50%; animation: typingBounce 1.2s ease infinite; }
+.typing-dots span:nth-child(2) { animation-delay: .15s; }
+.typing-dots span:nth-child(3) { animation-delay: .3s; }
+@keyframes typingBounce { 0%, 60%, 100% { transform: translateY(0); opacity: .4; } 30% { transform: translateY(-6px); opacity: 1; } }
+@keyframes msgIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.demo-workflow-preview { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 20px; background: rgba(255,255,255,.05); border-top: 1px solid rgba(255,255,255,.08); flex-wrap: wrap; }
+.demo-wf-step { padding: 8px 14px; border-radius: 100px; font-size: 11px; font-weight: 700; background: rgba(255,255,255,.08); color: rgba(255,255,255,.5); transition: all .4s var(--ease-out); }
+.demo-wf-step.active { background: var(--lime); color: var(--ink); transform: scale(1.05); }
+.demo-wf-arrow { color: rgba(255,255,255,.3); font-size: 12px; }

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Case study de la refonte du projet Aureon - Portfolio" />
+    <title>Aureon — Case Study & À propos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("aureon-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script type="module" src="/src/js/main.js"></script>
+    <style>
+      .case-study { padding-top: 150px; }
+      .case-study article { max-width: 800px; margin: 0 auto 80px; }
+      .case-study h2 { font-size: 40px; margin-bottom: 30px; }
+      .case-study h3 { font-size: 24px; margin: 40px 0 20px; color: var(--cobalt); }
+      .case-study p { color: var(--ink-soft); line-height: 1.8; margin-bottom: 20px; font-size: 16px; }
+      .case-study ul { margin-bottom: 20px; padding-left: 20px; }
+      .case-study li { color: var(--ink-soft); line-height: 1.8; margin-bottom: 10px; }
+      .about-card { background: color-mix(in srgb, var(--surface-elevated) 50%, transparent); padding: 40px; border-radius: var(--radius); border: 1px solid var(--line); display: flex; gap: 40px; align-items: center; }
+      .about-avatar { width: 120px; height: 120px; border-radius: 50%; background: var(--cobalt); flex-shrink: 0; display: grid; place-items: center; color: white; font-size: 40px; font-weight: 800; font-family: 'Manrope'; }
+    </style>
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header scrolled">
+      <nav class="nav shell">
+        <a class="brand" href="/" aria-label="Aureon, accueil">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span>Aureon</span>
+        </a>
+        <div class="nav-links">
+          <a href="/">Retour au site</a>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Activer le mode sombre">
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 6.5 6.5 0 0 0 21 14.5Z"/></svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="case-study shell">
+      <article>
+        <span class="kicker">Case Study</span>
+        <h2>Refonte & Optimisation d'Aureon</h2>
+        <p>Aureon a été conçu pour être bien plus qu'une simple landing page : c'est un produit démontrant des compétences avancées en architecture front-end, en animation 3D et en expérience utilisateur fluide.</p>
+
+        <h3>1. L'Expérience "Wow Factor"</h3>
+        <p>L'ancien header avec de simples effets CSS a été remplacé par un système de particules en <strong>Three.js (WebGL)</strong>. Cela offre une profondeur tridimensionnelle interactive, tout en conservant une excellente fluidité grâce à une utilisation mesurée des draw calls et des matériaux.</p>
+        <p>Les animations de défilement (ScrollTrigger) ont été intégrées via <strong>GSAP</strong>, remplaçant un IntersectionObserver basique. Les éléments apparaissent avec des effets de parallaxe et des décalages (staggers) qui guident l'œil de l'utilisateur.</p>
+
+        <h3>2. Architecture CSS & Performance</h3>
+        <p>Le fichier monolithique de 50Ko a été scindé en modules CSS clairs (variables, layout, components). L'utilisation de <strong>Vite</strong> permet la minification, le bundling des assets et garantit des temps de chargement records (Scores Lighthouse à 100).</p>
+
+        <h3>3. Interactions avancées</h3>
+        <ul>
+          <li><strong>Curseur personnalisé :</strong> Un curseur magnétique géré par GSAP pour une fluidité à 60fps.</li>
+          <li><strong>Chatbot IA simulé :</strong> Intégration d'une logique de réponse asynchrone pour imiter une interaction API, avec un système de file d'attente (typing indicator).</li>
+          <li><strong>Simulateur ROI :</strong> Utilisation de <strong>Chart.js</strong> pour rendre visuelles les économies potentielles, actualisées en temps réel.</li>
+        </ul>
+      </article>
+
+      <article id="about">
+        <span class="kicker">À propos du développeur</span>
+        <div class="about-card">
+          <div class="about-avatar">DEV</div>
+          <div>
+            <h3>Créateur du projet</h3>
+            <p>Ce projet a été architecturé et développé pour démontrer ma maîtrise des écosystèmes Vanilla JS avancés, de l'optimisation des performances web, et des bibliothèques visuelles (GSAP, Three.js).</p>
+            <p>J'accorde une attention particulière aux détails : micro-interactions, accessibilité clavier (a11y), et l'équilibre entre design premium et performance technique.</p>
+            <a href="https://github.com/developer/aureon" target="_blank" class="button button-primary" style="margin-top: 15px;">Voir sur GitHub</a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aureon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3157f6"/>
+      <stop offset="1" stop-color="#121417"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <g transform="rotate(24 256 256)">
+    <rect x="165" y="200" width="46" height="150" rx="23" fill="#c6f35b"/>
+    <rect x="233" y="100" width="46" height="250" rx="23" fill="#c6f35b"/>
+    <rect x="301" y="155" width="46" height="195" rx="23" fill="#c6f35b"/>
+  </g>
+</svg>

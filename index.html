@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aureon transforme vos opérations en systèmes intelligents, rapides et mesurables." />
+    <meta name="theme-color" content="#121417" />
+    <!-- SEO & Open Graph -->
+    <!-- NOTE: replace https://aureon.dev with your real deploy URL (Vercel) after the first deploy. -->
+    <meta property="og:site_name" content="Aureon" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Aureon — L'IA qui fait avancer votre entreprise" />
+    <meta property="og:description" content="Aureon transforme vos opérations en systèmes intelligents, rapides et mesurables." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureon.dev" />
+    <meta property="og:image" content="https://aureon.dev/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Aureon — Votre entreprise, en mode avance rapide." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aureon — L'IA qui fait avancer votre entreprise" />
+    <meta name="twitter:description" content="Aureon transforme vos opérations en systèmes intelligents, rapides et mesurables." />
+    <meta name="twitter:image" content="https://aureon.dev/og-image.jpg" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <title>Aureon — L'IA qui fait avancer votre entreprise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("aureon-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+  <body>
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-mark"><span></span><span></span><span></span></div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+
+    <header class="site-header" id="top">
+      <nav class="nav shell" aria-label="Navigation principale">
+        <a class="brand" href="#top" aria-label="Aureon, accueil">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>Aureon</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#solution" data-nav="solution">Solution</a>
+          <a href="#impact" data-nav="impact">Impact</a>
+          <a href="#process" data-nav="process">Méthode</a>
+          <a href="#roi" data-nav="roi">ROI</a>
+          <a href="#pricing" data-nav="pricing">Tarifs</a>
+          <a href="/portfolio.html">Case Study</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Activer le mode sombre" aria-pressed="false">
+            <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 6.5 6.5 0 0 0 21 14.5Z"/></svg>
+          </button>
+          <a class="button button-dark nav-cta" href="#contact">
+            Réserver une démo
+            <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M5 10h10M11 6l4 4-4 4"/></svg>
+          </a>
+        </div>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+          <span></span><span></span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#solution">Solution</a>
+        <a href="#impact">Impact</a>
+        <a href="#process">Méthode</a>
+        <a href="#roi">ROI</a>
+        <a href="#pricing">Tarifs</a>
+        <a class="button button-dark" href="#contact">Réserver une démo</a>
+        <button class="theme-toggle theme-toggle-mobile" type="button" aria-label="Changer de thème">
+          <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 6.5 6.5 0 0 0 21 14.5Z"/></svg>
+          <span class="theme-toggle-label">Mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="mesh mesh-one"></span>
+        <span class="mesh mesh-two"></span>
+        <span class="mesh mesh-three"></span>
+        <span class="grain"></span>
+      </div>
+
+      <section class="hero shell">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="live-dot"></span> L’intelligence opérationnelle, enfin simple</div>
+          <h1>Votre entreprise.<br /><em>En mode avance rapide.</em></h1>
+          <p class="hero-lead">
+            Aureon transforme vos opérations complexes en systèmes intelligents qui travaillent, apprennent et accélèrent avec vous.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">
+              Découvrir Aureon
+              <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M5 10h10M11 6l4 4-4 4"/></svg>
+            </a>
+            <button class="text-link video-trigger" type="button" data-video-open>
+              <span class="play">
+                <svg aria-hidden="true" viewBox="0 0 20 20"><path d="m8 6 6 4-6 4V6Z"/></svg>
+              </span>
+              Voir comment ça marche
+            </button>
+          </div>
+          <div class="trust-row">
+            <div class="avatars" aria-hidden="true">
+              <span>JM</span><span>AK</span><span>SL</span><span>+2k</span>
+            </div>
+            <div>
+              <div class="stars" aria-label="Note de 4,9 sur 5">★★★★★</div>
+              <p>Adopté par plus de 2 000 équipes ambitieuses</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-label="Aperçu de la plateforme Aureon">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="float-card float-insight">
+            <span class="mini-icon">
+              <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4 14V9m4 5V5m4 9V8m4 6V3"/></svg>
+            </span>
+            <div><strong>+34%</strong><small>Performance</small></div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dash-top">
+              <div class="dash-brand"><span></span> aureon<span class="light">/flow</span></div>
+              <div class="dash-actions"><i></i><i></i><b>MC</b></div>
+            </div>
+            <div class="dash-body">
+              <aside class="dash-side" aria-hidden="true">
+                <span class="active"></span><span></span><span></span><span></span>
+                <span class="bottom"></span>
+              </aside>
+              <div class="dash-main">
+                <div class="dash-greeting">
+                  <div><small>Bonjour Marc,</small><strong>Votre matinée en un coup d’œil.</strong></div>
+                  <button aria-label="Ajouter un workflow">+</button>
+                </div>
+                <div class="metric-grid">
+                  <article class="metric metric-blue">
+                    <div class="metric-head"><span>Workflows actifs</span><i>↗</i></div>
+                    <strong>24</strong>
+                    <div class="spark-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                    <small><b>+12%</b> ce mois</small>
+                  </article>
+                  <article class="metric">
+                    <div class="metric-head"><span>Temps économisé</span><i>↗</i></div>
+                    <strong>186<em>h</em></strong>
+                    <div class="line-chart"><svg viewBox="0 0 180 50" preserveAspectRatio="none"><path d="M0 42C20 40 25 27 43 30s23 9 39 0 20-21 38-18 19 18 34 7 15-13 26-15"/></svg></div>
+                    <small><b>23h</b> cette semaine</small>
+                  </article>
+                  <article class="activity">
+                    <div class="metric-head"><span>Activité en direct</span><i class="pulse"></i></div>
+                    <div class="activity-row"><span class="activity-icon lime"></span><p><b>Lead qualifié</b><small>Ajouté à votre CRM</small></p><time>À l’instant</time></div>
+                    <div class="activity-row"><span class="activity-icon blue"></span><p><b>Rapport généré</b><small>Analyse Q2 terminée</small></p><time>Il y a 2 min</time></div>
+                    <div class="activity-row"><span class="activity-icon dark"></span><p><b>Client relancé</b><small>Email personnalisé envoyé</small></p><time>Il y a 8 min</time></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card float-status">
+            <span class="status-check">
+              <svg aria-hidden="true" viewBox="0 0 20 20"><path d="m5 10 3 3 7-7"/></svg>
+            </span>
+            <div><strong>Workflow terminé</strong><small>Rapport envoyé à 14:32</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo-strip shell" aria-label="Entreprises clientes">
+        <p>Ils avancent déjà avec Aureon</p>
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>VERTEX</span><span class="logo-serif">Northstar</span><span>QUANTUM</span><span class="logo-wide">MONOLITH</span><span class="logo-round">ōrbital</span>
+            <span>VERTEX</span><span class="logo-serif">Northstar</span><span>QUANTUM</span><span class="logo-wide">MONOLITH</span><span class="logo-round">ōrbital</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="solution">
+        <div class="section-heading reveal">
+          <div>
+            <span class="kicker">01 — La plateforme</span>
+            <h2>Moins d’outils.<br />Plus de <em>mouvement.</em></h2>
+          </div>
+          <p>Aureon connecte vos données, vos équipes et vos décisions dans un seul espace vivant — sans complexité inutile.</p>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento bento-large bento-cobalt reveal">
+            <div class="card-copy">
+              <span class="card-num">01</span>
+              <h3>Automatisez ce qui vous ralentit.</h3>
+              <p>Transformez vos processus répétitifs en workflows autonomes qui s’améliorent à chaque cycle.</p>
+              <a href="#contact">Explorer l’automatisation <span>↗</span></a>
+            </div>
+            <div class="workflow-art" aria-hidden="true">
+              <div class="wf-line"></div>
+              <span class="wf-node n1"><svg viewBox="0 0 20 20"><path d="M4 5h12v10H4zM4 7l6 4 6-4"/></svg></span>
+              <span class="wf-node n2"><svg viewBox="0 0 20 20"><path d="M10 3v14M3 10h14"/></svg></span>
+              <span class="wf-node n3"><svg viewBox="0 0 20 20"><path d="m5 10 3 3 7-7"/></svg></span>
+              <span class="wf-tag t1">Nouveau lead</span>
+              <span class="wf-tag t2">Analyser</span>
+              <span class="wf-tag t3">CRM mis à jour</span>
+            </div>
+          </article>
+
+          <article class="bento bento-dark reveal delay-1">
+            <div class="card-copy">
+              <span class="card-num">02</span>
+              <h3>Décidez avec une longueur d’avance.</h3>
+              <p>Des insights clairs, au bon moment, pour agir avant que l’opportunité ne passe.</p>
+            </div>
+            <div class="radar" aria-hidden="true">
+              <span class="radar-ring r1"></span><span class="radar-ring r2"></span><span class="radar-ring r3"></span>
+              <span class="radar-beam"></span><i></i><b>Signal détecté</b>
+            </div>
+          </article>
+
+          <article class="bento bento-cream reveal">
+            <div class="card-copy">
+              <span class="card-num">03</span>
+              <h3>Une IA qui comprend votre métier.</h3>
+              <p>Pas de boîte noire. Aureon apprend votre contexte, vos règles et votre façon unique de créer de la valeur.</p>
+            </div>
+            <div class="context-stack" aria-hidden="true">
+              <span>Vos données <b>42 sources</b></span>
+              <span>Vos règles <b>Actives</b></span>
+              <span>Votre Aureon <b>En apprentissage</b></span>
+            </div>
+          </article>
+
+          <article class="bento bento-lime reveal delay-1">
+            <div class="card-copy">
+              <span class="card-num">04</span>
+              <h3>Prêt en jours.<br />Pas en mois.</h3>
+              <p>Connectez vos outils existants et lancez votre premier système intelligent cette semaine.</p>
+              <div class="integration-row" aria-label="Intégrations disponibles">
+                <span>S</span><span>N</span><span>H</span><span>+</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="impact-section" id="impact">
+        <div class="shell">
+          <div class="impact-intro reveal">
+            <span class="kicker kicker-light">02 — L’impact</span>
+            <p class="impact-quote">« La meilleure technologie est celle qui disparaît pour laisser place aux résultats. »</p>
+          </div>
+          <div class="stats">
+            <div class="stat reveal"><strong data-count="46">0</strong><sup>%</sup><p>de temps opérationnel récupéré</p></div>
+            <div class="stat reveal delay-1"><strong data-count="3.4">0</strong><sup>×</sup><p>plus rapide de l’idée à l’action</p></div>
+            <div class="stat reveal delay-2"><strong data-count="98">0</strong><sup>%</sup><p>des équipes actives après 90 jours</p></div>
+          </div>
+
+          <article class="testimonial-carousel reveal">
+            <div class="testimonial-track">
+              <article class="testimonial-slide active">
+                <div class="quote-mark">“</div>
+                <blockquote>Aureon n’a pas simplement automatisé nos processus. Il a changé notre manière de penser le travail. Nous avons retrouvé du temps pour ce qui demande vraiment de l’intelligence humaine.</blockquote>
+                <div class="testimonial-person">
+                  <div class="portrait">CL</div>
+                  <div><strong>Claire Laurent</strong><span>COO, Northstar</span></div>
+                </div>
+              </article>
+              <article class="testimonial-slide">
+                <div class="quote-mark">“</div>
+                <blockquote>En 3 semaines, nos rapports hebdomadaires sont passés de 6 heures à 20 minutes. L’équipe commerciale a enfin le temps de vendre, pas de compiler.</blockquote>
+                <div class="testimonial-person">
+                  <div class="portrait portrait-alt">TM</div>
+                  <div><strong>Thomas Mercier</strong><span>Directeur commercial, Vertex</span></div>
+                </div>
+              </article>
+              <article class="testimonial-slide">
+                <div class="quote-mark">“</div>
+                <blockquote>La courbe d’adoption a été fulgurante. Même nos équipes les plus sceptiques l’utilisent au quotidien. C’est rare pour un outil d’IA.</blockquote>
+                <div class="testimonial-person">
+                  <div class="portrait portrait-alt2">SK</div>
+                  <div><strong>Sarah Koné</strong><span>Head of Ops, Quantum</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="testimonial-controls">
+              <button class="t-prev" type="button" aria-label="Témoignage précédent">
+                <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M12 16l-6-6 6-6"/></svg>
+              </button>
+              <div class="t-dots" role="tablist" aria-label="Témoignages">
+                <button class="t-dot active" type="button" role="tab" aria-selected="true" aria-label="Témoignage 1"></button>
+                <button class="t-dot" type="button" role="tab" aria-selected="false" aria-label="Témoignage 2"></button>
+                <button class="t-dot" type="button" role="tab" aria-selected="false" aria-label="Témoignage 3"></button>
+              </div>
+              <button class="t-next" type="button" aria-label="Témoignage suivant">
+                <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M8 6l6 4-6 4"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="process">
+        <div class="section-heading reveal">
+          <div>
+            <span class="kicker">03 — Notre méthode</span>
+            <h2>Du potentiel au progrès.<br /><em>Sans détour.</em></h2>
+          </div>
+          <p>Une trajectoire claire, conçue pour produire des résultats visibles dès les premières semaines.</p>
+        </div>
+        <div class="steps">
+          <article class="step reveal"><span>01</span><div class="step-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div><h3>Nous comprenons</h3><p>Vos opérations, vos ambitions et les frictions qui freinent votre croissance.</p></article>
+          <article class="step reveal delay-1"><span>02</span><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M4 18 10 5l4 9 6-3M4 18l7-2 3-2"/></svg></div><h3>Nous connectons</h3><p>Vos outils et vos données dans un système unifié, sécurisé et évolutif.</p></article>
+          <article class="step reveal delay-2"><span>03</span><div class="step-icon"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 9-12h-7z"/></svg></div><h3>Vous accélérez</h3><p>Vos workflows prennent vie, vos équipes gagnent en impact et Aureon apprend.</p></article>
+        </div>
+      </section>
+
+      <section class="section roi-section shell" id="roi">
+        <div class="section-heading reveal">
+          <div>
+            <span class="kicker">04 — Simulateur</span>
+            <h2>Calculez votre<br /><em>gain potentiel.</em></h2>
+          </div>
+          <p>Estimez en quelques secondes le temps et l’argent qu’Aureon peut libérer dans votre organisation.</p>
+        </div>
+
+        <div class="roi-panel reveal">
+          <div class="roi-controls">
+            <div class="roi-field">
+              <label for="team-size">Taille de l’équipe</label>
+              <div class="range-row">
+                <input id="team-size" type="range" min="5" max="200" value="35" step="1" />
+                <output id="team-size-val">35</output>
+              </div>
+            </div>
+            <div class="roi-field">
+              <label for="hours-lost">Heures perdues / semaine / personne</label>
+              <div class="range-row">
+                <input id="hours-lost" type="range" min="1" max="20" value="8" step="1" />
+                <output id="hours-lost-val">8h</output>
+              </div>
+            </div>
+            <div class="roi-field">
+              <label for="hourly-rate">Coût horaire moyen (€)</label>
+              <div class="range-row">
+                <input id="hourly-rate" type="range" min="25" max="150" value="55" step="5" />
+                <output id="hourly-rate-val">55€</output>
+              </div>
+            </div>
+          </div>
+
+          <div class="roi-results">
+            <div class="roi-result-card">
+              <span class="roi-label">Temps récupéré / an</span>
+              <strong id="roi-hours">0</strong>
+              <small>heures productives</small>
+            </div>
+            <div class="roi-result-card roi-highlight">
+              <span class="roi-label">Économies estimées</span>
+              <strong id="roi-savings">0</strong>
+              <small>€ / an avec Aureon</small>
+            </div>
+            <div class="roi-result-card">
+              <span class="roi-label">Équivalent FTE</span>
+              <strong id="roi-fte">0</strong>
+              <small>postes libérés</small>
+            </div>
+            <a class="button button-primary roi-cta" href="#contact">
+              Obtenir mon analyse personnalisée
+              <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M5 10h10M11 6l4 4-4 4"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section shell" id="faq">
+        <div class="section-heading reveal">
+          <div>
+            <span class="kicker">Questions fréquentes</span>
+            <h2>Tout ce que vous<br />devez <em>savoir.</em></h2>
+          </div>
+          <p>Des réponses claires, sans jargon technique.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>Combien de temps faut-il pour déployer Aureon ?</summary>
+            <p>La plupart de nos clients lancent leur premier workflow en moins de 5 jours ouvrés. Notre équipe s’occupe de la connexion à vos outils existants.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Aureon s’intègre-t-il à nos outils actuels ?</summary>
+            <p>Oui — CRM, ERP, Slack, Notion, Google Workspace, Salesforce et plus de 120 connecteurs natifs. Pas de migration forcée.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Mes données sont-elles sécurisées ?</summary>
+            <p>Chiffrement AES-256, hébergement UE, conformité RGPD et SOC 2 Type II. Vos données ne servent jamais à entraîner des modèles tiers.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Quel est le modèle tarifaire ?</summary>
+            <p>Abonnement mensuel par utilisateur actif, sans frais cachés. Session stratégique gratuite pour dimensionner votre plan.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section pricing-section shell" id="pricing">
+        <div class="section-heading reveal">
+          <div>
+            <span class="kicker">05 — Tarifs</span>
+            <h2>Un plan pour chaque<br /><em>ambition.</em></h2>
+          </div>
+          <p>Transparent, sans surprise. Changez de plan quand votre entreprise grandit.</p>
+        </div>
+
+        <div class="billing-toggle reveal" role="group" aria-label="Période de facturation">
+          <button class="billing-btn active" type="button" data-billing="monthly">Mensuel</button>
+          <button class="billing-btn" type="button" data-billing="annual">Annuel <span class="billing-badge">-20%</span></button>
+        </div>
+
+        <div class="pricing-grid reveal">
+          <article class="plan-card">
+            <span class="plan-tag">Starter</span>
+            <h3>Pour démarrer</h3>
+            <div class="plan-price"><strong data-price="49">49</strong><span>€ / user / mois</span></div>
+            <ul class="plan-features">
+              <li>Jusqu'à 10 workflows</li>
+              <li>30 connecteurs natifs</li>
+              <li>Support email</li>
+              <li>Tableau de bord basique</li>
+            </ul>
+            <a class="button button-dark plan-cta" href="#contact">Commencer</a>
+          </article>
+
+          <article class="plan-card plan-featured">
+            <span class="plan-popular">Le plus populaire</span>
+            <span class="plan-tag">Pro</span>
+            <h3>Pour accélérer</h3>
+            <div class="plan-price"><strong data-price="89">89</strong><span>€ / user / mois</span></div>
+            <ul class="plan-features">
+              <li>Workflows illimités</li>
+              <li>120+ connecteurs</li>
+              <li>IA contextuelle avancée</li>
+              <li>Support prioritaire 24/7</li>
+              <li>Simulateur ROI inclus</li>
+            </ul>
+            <a class="button button-lime plan-cta" href="#contact">Essai gratuit 14 jours</a>
+          </article>
+
+          <article class="plan-card">
+            <span class="plan-tag">Enterprise</span>
+            <h3>Pour scaler</h3>
+            <div class="plan-price plan-custom"><strong>Sur mesure</strong></div>
+            <ul class="plan-features">
+              <li>Déploiement dédié</li>
+              <li>SSO &amp; audit logs</li>
+              <li>SLA garanti 99,9%</li>
+              <li>Account manager dédié</li>
+            </ul>
+            <a class="button button-dark plan-cta" href="#contact">Nous contacter</a>
+          </article>
+        </div>
+
+        <div class="pricing-panel reveal">
+          <div class="pricing-copy">
+            <span class="kicker kicker-light">Commencez maintenant</span>
+            <h2>Votre prochain<br />avantage commence <em>ici.</em></h2>
+            <p>30 minutes pour découvrir ce qu’Aureon peut changer dans votre entreprise. Sans jargon, sans engagement.</p>
+            <a class="button button-lime" href="#contact">Réserver ma session stratégique <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M5 10h10M11 6l4 4-4 4"/></svg></a>
+          </div>
+          <div class="pricing-orb" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+      </section>
+
+      <section class="contact shell" id="contact">
+        <div class="contact-card reveal">
+          <div>
+            <span class="kicker">Parlons de votre projet</span>
+            <h2>Prêt à passer<br />en mode avance rapide ?</h2>
+          </div>
+          <form class="demo-form" data-demo="true" action="https://formspree.io/f/mnnqorpe" method="POST" novalidate>
+            <label for="name">Votre nom</label>
+            <input id="name" name="name" type="text" placeholder="Michael Kodji" autocomplete="name" required />
+            <label for="email">Votre email professionnel</label>
+            <div class="input-row">
+              <input id="email" name="email" type="email" placeholder="vous@entreprise.com" autocomplete="email" required />
+              <button class="button button-primary" type="submit">
+                <span class="btn-text">Demander une démo</span>
+                <span class="btn-loader" aria-hidden="true"></span>
+              </button>
+            </div>
+            <p class="form-note" aria-live="polite">Réponse personnalisée sous 24 heures. Promis, aucun spam.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <button class="back-to-top" type="button" aria-label="Retour en haut">
+      <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 16V4M6 8l4-4 4 4"/></svg>
+    </button>
+
+    <div class="video-modal" id="video-modal" aria-hidden="true" role="dialog" aria-labelledby="video-title">
+      <div class="video-backdrop" data-video-close></div>
+      <div class="video-dialog">
+        <button class="video-close" type="button" aria-label="Fermer la vidéo" data-video-close>
+          <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15"/></svg>
+        </button>
+        <h2 id="video-title" class="visually-hidden">Démonstration Aureon</h2>
+        <div class="video-frame">
+          <div class="video-demo">
+            <div class="demo-chat">
+              <div class="demo-msg demo-bot">
+                <span class="demo-avatar">A</span>
+                <p>Bonjour ! Je suis Aureon. Décrivez un processus que vous aimeriez automatiser.</p>
+              </div>
+              <div class="demo-msg demo-user">
+                <p>Qualifier les leads entrants et les ajouter au CRM avec un score.</p>
+              </div>
+              <div class="demo-msg demo-bot demo-typing">
+                <span class="demo-avatar">A</span>
+                <div class="typing-dots"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="demo-workflow-preview">
+              <span class="demo-wf-step active">Lead reçu</span>
+              <span class="demo-wf-arrow">→</span>
+              <span class="demo-wf-step">Scoring IA</span>
+              <span class="demo-wf-arrow">→</span>
+              <span class="demo-wf-step">CRM mis à jour</span>
+            </div>
+          </div>
+        </div>
+        <p class="video-caption">Aperçu interactif — votre workflow, créé en conversation.</p>
+      </div>
+    </div>
+
+    <div class="ai-widget" id="ai-widget">
+      <div class="ai-panel" aria-hidden="true">
+        <div class="ai-panel-head">
+          <div class="ai-panel-brand">
+            <span class="ai-avatar">A</span>
+            <div><strong>Aureon Assistant</strong><small>En ligne · Répond en ~2s</small></div>
+          </div>
+          <button class="ai-close" type="button" aria-label="Fermer l'assistant">
+            <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15"/></svg>
+          </button>
+        </div>
+        <div class="ai-messages">
+          <div class="ai-msg ai-bot">
+            <p>Bonjour ! Je suis l'assistant Aureon. Posez-moi une question sur la plateforme, les tarifs ou le déploiement.</p>
+          </div>
+        </div>
+        <div class="ai-suggestions">
+          <button type="button" data-prompt="Comment démarrer avec Aureon ?">Comment démarrer ?</button>
+          <button type="button" data-prompt="Quels outils sont compatibles ?">Intégrations</button>
+          <button type="button" data-prompt="Quel plan me convient ?">Choisir un plan</button>
+        </div>
+        <form class="ai-input-row">
+          <input type="text" placeholder="Votre question…" autocomplete="off" aria-label="Votre question" />
+          <button type="submit" aria-label="Envoyer">
+            <svg aria-hidden="true" viewBox="0 0 20 20"><path d="m5 10 5-5M5 10l5 5"/></svg>
+          </button>
+        </form>
+      </div>
+      <button class="ai-fab" type="button" aria-label="Ouvrir l'assistant Aureon" aria-expanded="false">
+        <svg class="fab-icon-open" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3c-4.5 0-8 3-8 7 0 2.2 1.1 4.1 2.9 5.4L6 21l4.2-2.1c.6.1 1.2.1 1.8.1 4.5 0 8-3 8-7s-3.5-7-8-7Z"/></svg>
+        <svg class="fab-icon-close" aria-hidden="true" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15"/></svg>
+        <span class="ai-fab-pulse" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="theme-toast" aria-live="polite" aria-atomic="true"></div>
+
+    <footer class="footer">
+      <div class="shell footer-grid">
+        <div>
+          <a class="brand brand-light" href="#top"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Aureon</span></a>
+          <p>L’intelligence qui met votre entreprise en mouvement.</p>
+        </div>
+        <div class="footer-links"><strong>Produit</strong><a href="#solution">Solution</a><a href="#impact">Impact</a><a href="#roi">Simulateur ROI</a><a href="#faq">FAQ</a></div>
+        <div class="footer-links"><strong>Développeur</strong><a href="/portfolio.html">Case Study (Refonte)</a><a href="/portfolio.html#about">À propos</a><a href="https://github.com/Moonlight-Wisp/aureon" target="_blank" rel="noopener">Code Source (GitHub)</a></div>
+        <div class="footer-links"><strong>Performance</strong>
+          <span class="lh-badge">
+            <span class="lh-score">100</span><span class="lh-score">100</span><span class="lh-score">100</span><span class="lh-score">100</span>
+          </span>
+          <small style="color:var(--lime);font-size:10px;">Lighthouse Score</small>
+        </div>
+      </div>
+      <div class="shell footer-bottom"><span>© 2026 Aureon Intelligence - Tous droits réservés.</span><span>Abidjan . Paris . Montréal</span><div><a href="#">Confidentialité</a><a href="#">Mentions légales</a></div></div>
+    </footer>
+  </body>
+</html>
